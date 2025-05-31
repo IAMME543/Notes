@@ -1,5 +1,15 @@
+
+@media (aspect-ratio > 1/1) {
 :root {
     --button-height: 10px;
+    --main-width: 33.33vw;
+}
+}
+@media (aspect-ratio < 1/1) {
+:root {
+    --button-height: 10px;
+    --main-width: 98vw;
+}
 }
 
 
@@ -16,7 +26,7 @@ body {
 }
 
 .main {
-    width: 33.33vw;
+    width: var(--main-width);
     height: 100%;
     margin: 0 auto;
 }
@@ -27,7 +37,7 @@ textarea {
     border-radius: 0;
     border-color: transparent;
     height: 100%;
-    width: 33.33vw;
+    width: var(--main-width);
     padding: 2%;
     font-size: large;
 }
