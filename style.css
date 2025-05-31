@@ -5,7 +5,7 @@
     --main-width: 33.33vw;
 }
 }
-@media (aspect-ratio < 1/1) {
+@media (aspect-ratio <= 1/1) {
 :root {
     --button-height: 10px;
     --main-width: 98vw;

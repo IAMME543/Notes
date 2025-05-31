@@ -11,7 +11,7 @@
         return trimedstr;
       }
     } else {
-      return null;
+      return "You need to name the file next time";
     }
   }
   const textarea = document.getElementById("notes");
@@ -21,6 +21,9 @@
     .getElementById("Save")
     .addEventListener("click", function () {
       console.log("Save");
+      if (extractTitle(textarea.value) === "You need to name the file next time") {
+        textarea.value = "#You need to name the file next time\n" + textarea.value;
+      }
 
       const blob = new Blob([textarea.value], { type: "text/plain" });
       const url = URL.createObjectURL(blob);
