@@ -11,7 +11,7 @@
         return trimedstr;
       }
     } else {
-      return null;
+      return "You need to name the file next time";
     }
   }
   const textarea = document.getElementById("notes");
